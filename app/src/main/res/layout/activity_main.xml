@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_gravity="center_vertical"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <TextView
+            android:layout_marginTop="30dp"
+            android:id="@+id/TV_initial_investment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Initial_Investment"
+            android:layout_centerHorizontal="true"/>
+
+
+        <EditText
+            android:layout_marginTop="5dp"
+            android:id="@+id/initial_investment"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TV_initial_investment"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_marginTop="30dp"
+            android:id="@+id/TV_regular_payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/initial_investment"
+            android:text="@string/Regular_Payment"
+            android:layout_centerHorizontal="true"/>
+
+        <EditText
+            android:layout_marginTop="5dp"
+            android:id="@+id/regular_payment"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@+id/TV_regular_payment"
+            />
+
+        <Spinner
+            android:layout_marginTop="5dp"
+            android:id="@+id/frequency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/Frequency"
+            android:layout_below="@+id/TV_regular_payment"
+            android:layout_toRightOf="@+id/regular_payment"/>
+
+        <TextView
+            android:layout_marginTop="30dp"
+            android:id="@+id/TV_interest_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Annual_Interest_Rate"
+            android:layout_below="@+id/regular_payment"
+            android:layout_centerHorizontal="true"/>
+
+
+        <EditText
+            android:layout_marginTop="5dp"
+            android:id="@+id/interst_rate"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TV_interest_rate"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_marginTop="30dp"
+            android:id="@+id/TV_growth_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Years_to_grow"
+            android:layout_below="@+id/interst_rate"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/growth_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TV_growth_rate"
+            android:layout_marginLeft="40dp"/>
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/TV_growth_rate_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yrs"
+            android:layout_below="@+id/TV_growth_rate"
+            android:layout_toRightOf="@+id/growth_rate"/>
+
+        <SeekBar
+            android:layout_marginTop="5dp"
+            android:id="@+id/years_seekbar"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="10"
+            android:layout_below="@+id/TV_growth_rate"
+            android:layout_toRightOf="@+id/TV_growth_rate_value"/>
+
+        <Button
+            android:layout_marginTop="30dp"
+            android:id="@+id/calculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/years_seekbar"
+            android:text="Calculate"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_marginTop="40dp"
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_below="@+id/calculate"
+            android:layout_centerHorizontal="true"/>
+
+
+    </RelativeLayout>
+
+</LinearLayout>
